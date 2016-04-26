@@ -65,6 +65,7 @@ module.exports = function (app, db) {
 		var links = db.collection('links');
 		links.save(link, function(err, result){
 			if(err) throw err;
+			console.log('Saved: ' + link);
 		});
 	}
 
