@@ -9,6 +9,7 @@ module.exports = function (app, db) {
 
 	app.get('/new/:url*', createNewShortUrl);
 
+  /*
 	function checkIfExisting(req, res){
 		var url = process.env.BASE_URL + req.params.url;
 		if( url != process.env.BASE_URL + 'favicon.ico') {
@@ -16,6 +17,13 @@ module.exports = function (app, db) {
 			findLink(url, db, res);
 		}
 	}
+  */
+
+	function checkIfExisting(req, res){
+    var url = process.env.BASE_URL + req.params.url;
+    console.log('Searching for url: ' + url);
+    findLink(url, db, res);
+  }
 
 	function createLinkHash(url){
 		var hash = 0, 
