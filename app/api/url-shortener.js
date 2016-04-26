@@ -11,7 +11,9 @@ module.exports = function (app, db) {
 
 	function checkIfExisting(req, res){
 		var url = process.env.BASE_URL + req.params.url;
-		findLink(url, db, res);
+		if( url != process.env.BASE_URL + 'favicon.ico') {
+			findLink(url, db, res);
+		}
 	}
 
 	function createLinkHash(url){
