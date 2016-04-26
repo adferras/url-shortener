@@ -12,8 +12,8 @@ When I visit that shortened URL, it will redirect me to my original link.
 
 ## Example Usage:
 ```
-https://url-shortener-1690.herokuapp.com/new/https://www.google.com
+https://url-shortener-1690.herokuapp.com/new/http://www.google.com
 ```
 
 ## Example Output:
-{"original_url":"https://www.google.com","short_url":"http://url-shortener-1690.herokuapp.com/123456789"}
+{"original_url":"http://www.google.com","short_url":"http://url-shortener-1690.herokuapp.com/123456789"}
