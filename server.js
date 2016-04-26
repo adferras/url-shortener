@@ -10,9 +10,9 @@ var app = express();
 var path = require('path');
 app.use(express.static(__dirname + '/view'));
 app.use(express.static(__dirname + '/public'));
-require('dotenv').load();
+require('dotenv').config({silent: true});
 
-mongo.MongoClient.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/url-shortener', function(err, db) {
+mongo.MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/url-shortener', function(err, db) {
 
 	if (err) {
 		throw new Error('Database connection error!');
