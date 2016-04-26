@@ -21,6 +21,7 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    border-top: 1px solid black;
 }
 
 .error {
@@ -28,19 +29,24 @@ body {
 }
 
 header {
-    color: #00BCD4;
+    color: black;
     height: 56px;
     margin: 0 0 14px 0;
-    text-align: center;
+    text-align: left;
+    font-size: 18px;
 }
 
 p {
     margin: 8px 0 0 0;
 }
 
-.code {
-    color: red;
-    font-size: 14px;
+.code { 
+  font-size: 90%;
+  line-height: 1.2em;
+  font-family: Monaco, monospace;
+  color: red;
+  padding: 1em 1em;
+  background: #f4f4f4;
 }
 
 .container p {

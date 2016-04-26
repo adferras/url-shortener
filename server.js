@@ -26,7 +26,6 @@ mongo.MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/
 		max: 1000
 	});
 
-
 	routes(app, db);
 	api(app, db);
 
