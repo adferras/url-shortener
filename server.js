@@ -27,8 +27,8 @@ mongo.MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/
 	});
 
 
-	routes(app);
-	api(app);
+	routes(app, db);
+	api(app, db);
 
 	var port = process.env.PORT || 8080;
 	app.listen(port,  function () {
